@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111313">
+  <title>The Hi-Fi Archives</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #111313;
+      --panel: #191d1b;
+      --text: #f3f1e9;
+      --muted: #a4aaa1;
+      --accent: #c4f06b;
+      --line: #303630;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 80% 10%, #273021 0, transparent 35%),
+        var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(100% - 40px, 1000px);
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .now-playing {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    main {
+      padding: 90px 0 70px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 18px 0;
+      font-size: clamp(3rem, 9vw, 6.7rem);
+      letter-spacing: -0.07em;
+      line-height: 0.98;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 55px;
+    }
+
+    .card {
+      min-height: 190px;
+      padding: 24px;
+      background: rgba(25, 29, 27, 0.75);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .card h2 {
+      margin: 15px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 18px 22px;
+      border-left: 3px solid var(--accent);
+      background: rgba(196, 240, 107, 0.06);
+      color: var(--muted);
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0 35px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a href="#" class="logo">The Hi-Fi Archives</a>
+      <div class="now-playing">A little corner of the internet ✦</div>
+    </header>
+
+    <main>
+      <div class="eyebrow">Curious by nature · here for the good stuff</div>
+
+      <h1>Hello, I’m <span>your name</span>.</h1>
+
+      <p class="intro">
+        Welcome to my corner of the internet. This is where I keep things I enjoy,
+        things I’m curious about, and things I want to explore next. It’s simple,
+        thoughtful, and always evolving.
+      </p>
+
+      <section class="cards" aria-label="About me">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🎧</div>
+          <h2>Currently into</h2>
+          <p>Music, films, quiet aesthetics, and the small details that make life feel interesting.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">🔎</div>
+          <h2>Always curious about</h2>
+          <p>Art, stories, creativity, culture, and the little things that spark inspiration.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌱</div>
+          <h2>What’s next</h2>
+          <p>Learning, experimenting, collecting ideas, and making this space my own.</p>
+        </article>
+      </section>
+
+      <div class="note">
+        <strong>Small note:</strong> This page is here to introduce my vibe, not my whole life story.
+      </div>
+    </main>
+
+    <footer>
+      <span>Made with curiosity and a little bit of HTML.</span>
+      <span>Updated whenever inspiration strikes ✦</span>
+    </footer>
+  </div>
+</body>
+</html>
